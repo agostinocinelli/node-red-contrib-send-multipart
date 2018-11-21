@@ -106,6 +106,7 @@ module.exports = function(RED) {
 					}
 
 					node.send(msg);
+					node.status({});
 				});
 				var form = thisReq.form();
 				form.append('file', fs.createReadStream(filepath), {
